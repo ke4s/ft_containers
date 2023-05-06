@@ -27,7 +27,7 @@ namespace ft
 	template <> struct is_integral<signed char> : public integral_constant<bool, true> {};
 	template <> struct is_integral<unsigned char> : public integral_constant<bool, true> {};
 	template <> struct is_integral<wchar_t> : public integral_constant<bool, true> {};
-	template <> struct is_integral<char16_t> : public integral_constant<bool, true> {}; //since c++11
+	//template <> struct is_integral<char16_t> : public integral_constant<bool, true> {}; //since c++11. The tester want this.
 	template <> struct is_integral<short> : public integral_constant<bool, true> {};
 	template <> struct is_integral<unsigned short> : public integral_constant<bool, true> {};
 	template <> struct is_integral<int> : public integral_constant<bool, true> {};
