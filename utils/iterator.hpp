@@ -4,8 +4,6 @@
 #include "iterator_traits.hpp"
 #include "type_traits.hpp"
 
-//#include <type_traits> // for std::is_convertible
-
 namespace ft
 {
 	template <class Iterator>
@@ -25,18 +23,12 @@ namespace ft
 		random_access_iterator(Iterator value = NULL) : value(value) {}
 		~random_access_iterator() {};
 
-        /*
-		template <class U> random_access_iterator(const random_access_iterator<U>& other,
-		typename ft::enable_if<std::is_convertible<U, iterator_type>::value>::type* = 0) : value(other.base()) {};
-        */
-
-        template <class U> random_access_iterator(const random_access_iterator<U>& other
-        /*, typename ft::enable_if<std::is_convertible<U, iterator_type>::value>::type* = 0 */) : value(other.base()) {};
+        template <class U> random_access_iterator(const random_access_iterator<U>& other) : value(other.base()) {};
 
 
         Iterator		base() const { return value; }
 
-		random_access_iterator	&operator=(const random_access_iterator &obj)
+		random_access_iterator& operator=(const random_access_iterator &obj)
 		{
 			if (this == &obj)
 				return *this;
