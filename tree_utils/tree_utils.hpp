@@ -16,10 +16,10 @@ struct Rb_tree_node
 	node_ptr        left;
 	node_ptr        right;
 	value_type		value_field;
-	Rb_tree_node() : color(S_red), parent(NULL), left(NULL), right(NULL),value_field() {};
-	Rb_tree_node(value_type mapped) : color(S_red), parent(NULL), left(NULL), right(NULL),value_field(mapped) {};
-	Rb_tree_node(const Rb_tree_node &other) : value_field(other.value_field), parent(other.parent),
-											  left(other.left), right(other.right), color(other.color) {};
+	Rb_tree_node() : color(S_red), parent(NULL), left(NULL), right(NULL), value_field() {};
+	Rb_tree_node(value_type mapped) : color(S_red), parent(NULL), left(NULL), right(NULL), value_field(mapped) {};
+	Rb_tree_node(const Rb_tree_node &other) :  color(other.color), parent(other.parent),
+											  left(other.left), right(other.right),  value_field(other.value_field) {};
 };
 
 
