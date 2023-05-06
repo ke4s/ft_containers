@@ -158,7 +158,7 @@ public:
 	bool    operator==(const self& x) const
 	{ return node == x.getNode(); }
 
-	const link_type getNode(void) const
+    link_type getNode(void) const
 	{
 		return node;
 	}
@@ -230,7 +230,7 @@ public:
 		return tmp;
 	}
 
-	const link_type getNode(void) const
+    link_type getNode(void) const
 	{
 		return node;
 	}
