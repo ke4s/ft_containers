@@ -1,6 +1,8 @@
 NAME    = ft
 NAME2	= std
 
+NAME_TESTER = ft_containers-unit-test
+
 CC      = c++
 
 FLAGS   = -Wall -Werror -Wextra -std=c++98
@@ -21,8 +23,13 @@ clean:
 fclean: clean
 	@echo cleaning 100%
 
-test:
+$(NAME_TESTER):
 	git clone https://github.com/divinepet/ft_containers-unit-test
+
+down_tester: $(NAME_TESTER)
+
+del_tester:
+	rm -rf $(NAME_TESTER)
 
 re: clean $(NAME) $(NAME2)
 
