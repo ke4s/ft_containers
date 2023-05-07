@@ -135,7 +135,7 @@ private:
 	node_ptr newNode()
 	{
 		node_ptr ret = _alloc.allocate(1);
-		_alloc.construct(ret);
+		_alloc.construct(ret, i_node(value_type()));
 		return ret;
 	}
 
