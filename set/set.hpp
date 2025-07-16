@@ -1,3 +1,41 @@
+/*
+ * ft::set<Key, Compare, Allocator>
+ * -------------------------------
+ * An associative container that contains a sorted set of unique keys.
+ *
+ * Template Parameters:
+ *   - Key: Key type.
+ *   - Compare: Key comparison functor (default: std::less<Key>).
+ *   - Allocator: Allocator (default: std::allocator<Key>).
+ *
+ * Features:
+ *   - Unique keys
+ *   - Logarithmic time insert, erase, find
+ *   - Bidirectional iterators
+ *   - STL-compatible interface
+ *
+ * Example Usage:
+ *   ft::set<int> s;
+ *   s.insert(3);
+ *   s.insert(1);
+ *   s.insert(2);
+ *   for (ft::set<int>::iterator it = s.begin(); it != s.end(); ++it) {
+ *       std::cout << *it << std::endl;
+ *   }
+ *
+ * Methods:
+ *   - Constructors: default, range, copy
+ *   - operator=, get_allocator
+ *   - begin, end, rbegin, rend
+ *   - empty, size, max_size
+ *   - insert, erase, swap, clear
+ *   - find, count, lower_bound, upper_bound, equal_range
+ *   - key_comp, value_comp
+ *   - Comparison operators
+ *
+ * Notes:
+ *   - All elements are unique and sorted by key.
+ */
 //
 // Created by Kerim Sancakoglu on 2/2/23.
 //

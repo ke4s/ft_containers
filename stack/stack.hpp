@@ -1,3 +1,34 @@
+/*
+ * ft::stack<T, Container>
+ * ----------------------
+ * A container adapter that gives the functionality of a stack (LIFO structure).
+ *
+ * Template Parameters:
+ *   - T: Type of elements.
+ *   - Container: Underlying container type (default: ft::vector<T>).
+ *
+ * Features:
+ *   - LIFO semantics (push, pop, top)
+ *   - Uses any container with back(), push_back(), pop_back(), etc.
+ *   - STL-compatible interface
+ *
+ * Example Usage:
+ *   ft::stack<int> s;
+ *   s.push(1);
+ *   s.push(2);
+ *   std::cout << s.top() << std::endl; // 2
+ *   s.pop();
+ *   std::cout << s.top() << std::endl; // 1
+ *
+ * Methods:
+ *   - Constructors: default, copy
+ *   - top, push, pop
+ *   - empty, size
+ *   - Comparison operators
+ *
+ * Notes:
+ *   - Underlying container can be customized.
+ */
 #ifndef STACK_HPP
 #define STACK_HPP
 

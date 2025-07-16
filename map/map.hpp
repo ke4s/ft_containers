@@ -1,3 +1,43 @@
+/*
+ * ft::map<Key, T, Compare, Alloc>
+ * -------------------------------
+ * An associative container that stores key-value pairs in sorted order by key.
+ *
+ * Template Parameters:
+ *   - Key: Key type.
+ *   - T: Mapped value type.
+ *   - Compare: Key comparison functor (default: std::less<Key>).
+ *   - Alloc: Allocator (default: std::allocator<ft::pair<const Key, T>>).
+ *
+ * Features:
+ *   - Unique keys
+ *   - Logarithmic time insert, erase, find
+ *   - Bidirectional iterators
+ *   - STL-compatible interface
+ *
+ * Example Usage:
+ *   ft::map<std::string, int> m;
+ *   m["apple"] = 5;
+ *   m["banana"] = 3;
+ *   for (ft::map<std::string, int>::iterator it = m.begin(); it != m.end(); ++it) {
+ *       std::cout << it->first << ": " << it->second << std::endl;
+ *   }
+ *
+ * Methods:
+ *   - Constructors: default, range, copy
+ *   - operator=, get_allocator
+ *   - at, operator[]
+ *   - begin, end, rbegin, rend
+ *   - empty, size, max_size
+ *   - insert, erase, swap, clear
+ *   - find, count, lower_bound, upper_bound, equal_range
+ *   - key_comp, value_comp
+ *   - Comparison operators
+ *
+ * Notes:
+ *   - operator[] inserts a default value if key is not found.
+ *   - Throws std::out_of_range in at() if key is not found.
+ */
 #ifndef _MAP_H_
 #define _MAP_H_
 

@@ -1,3 +1,39 @@
+/*
+ * ft::vector<T, Allocator>
+ * ----------------------
+ * A dynamic array implementation similar to std::vector.
+ *
+ * Template Parameters:
+ *   - T: Type of elements.
+ *   - Allocator: Memory allocator (default: std::allocator<T>).
+ *
+ * Features:
+ *   - Dynamic resizing
+ *   - Random access iterators
+ *   - Efficient insertion/removal at the end
+ *   - STL-compatible interface
+ *
+ * Example Usage:
+ *   ft::vector<int> v;
+ *   v.push_back(1);
+ *   v.push_back(2);
+ *   for (ft::vector<int>::iterator it = v.begin(); it != v.end(); ++it) {
+ *       std::cout << *it << std::endl;
+ *   }
+ *
+ * Methods:
+ *   - Constructors: default, fill, range, copy
+ *   - operator=, assign
+ *   - at, operator[], front, back, data
+ *   - begin, end, rbegin, rend
+ *   - empty, size, capacity, max_size
+ *   - reserve, clear, insert, erase, push_back, pop_back, resize, swap
+ *   - Comparison operators
+ *
+ * Notes:
+ *   - Throws std::out_of_range on invalid access in at().
+ *   - Uses doubling strategy for capacity growth.
+ */
 #ifndef _VECTOR_HPP_
 #define _VECTOR_HPP_
 
